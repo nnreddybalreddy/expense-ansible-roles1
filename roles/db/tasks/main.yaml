@@ -19,7 +19,7 @@
 - name: common role
   ansible.builtin.import_role:
     name: common
-    vars_from: /vars/main.yaml
+    vars_from: vars/main.yaml
 
 - name: check password set or not
   community.mysql.mysql_info:    
