@@ -13,7 +13,7 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req  
-    vars_from: /vars/main.yaml  
+    vars_from: vars/main.yaml  
 
 # - name: rm -rf /usr/share/nginx/html/*
 #   ansible.builtin.file:

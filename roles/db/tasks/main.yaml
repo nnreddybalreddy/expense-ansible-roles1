@@ -16,10 +16,10 @@
     - cryptography
     executable: pip3.9 # pip3.11 if python version is 3.11    
 
-- name: common role
+- name: run app pre-requisites
   ansible.builtin.import_role:
     name: common
-    vars_from: vars/main.yaml
+    vars_from: vars/main.yaml   
 
 - name: check password set or not
   community.mysql.mysql_info:    
