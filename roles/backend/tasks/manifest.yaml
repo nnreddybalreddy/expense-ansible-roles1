@@ -1,8 +1,4 @@
-- name: ping
-  ansible.builtin.debug:
-    msg: "Hi"
-
-    
+  
 - name: dnf module disable nodejs -y
   ansible.builtin.command: dnf module disable nodejs -y
 
