@@ -1,0 +1,3 @@
+login_user: root
+login_host: DB_HOST
+login_password: ExpenseApp@1  
