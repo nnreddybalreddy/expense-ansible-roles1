@@ -21,7 +21,6 @@
     name: common
     tasks_from: app-pre-req
 
-
 # - name: mkdir /app
 #   ansible.builtin.file:  
 #     path: /app  
