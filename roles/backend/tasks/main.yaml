@@ -18,6 +18,8 @@
     name: expense
 
 - name: common role
+  tags:
+  - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-pre-req
@@ -35,7 +37,9 @@
 #     dest: /app
 #     remote_src: yes 
 
-- name: npm install      
+- name: npm install    
+  tags:
+  - deployment  
   ansible.builtin.command: npm install
   args:
     chdir: /app    
@@ -66,7 +70,9 @@
     daemon_reload: true  
 
 - name: start and enable backend service
+  tags:
+  - deployment
   ansible.builtin.service:
     name: backend
-    state: started
+    state: restarted
     enabled: yes          
